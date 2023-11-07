@@ -40,21 +40,21 @@ function generateSVG(fileName, data) {
 function init() {
 inquirer.prompt(questions).then((response) => {
 
-    console.log('Generating LOGO...');
+    console.log('Logo Generated!');
 
     if (response.shape === 'triangle') {
         const shape = new Triangle(response.shapeColor, response.text, response.textColor)
-        generateSVG('LOGO.svg', shape.render())  
+        generateSVG('Logo.svg', shape.render())  
     };
   
     if (response.shape === 'circle') {
         const shape = new Circle(response.shapeColor, response.text, response.textColor)
-        generateSVG('LOGO.svg', shape.render())  
+        generateSVG('Logo.svg', shape.render())  
     };
 
     if (response.shape === 'square') {
         const shape = new Square(response.shapeColor, response.text, response.textColor)
-        generateSVG('LOGO.svg', shape.render())  
+        generateSVG('Logo.svg', shape.render())  
     };
 
 })    
